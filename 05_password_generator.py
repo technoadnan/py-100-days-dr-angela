@@ -25,3 +25,11 @@ for _ in range(nr_numbers):
 # Hard Level - Order of characters randomised:
 # e.g. 4 letter, 2 symbol, 2 number = g^2jk8&P
 
+
+upt_password = ""
+for _ in range(len(password)):
+   r = random.choice(password)
+   upt_password = upt_password + r
+   password.remove(r)
+
+print(upt_password)
