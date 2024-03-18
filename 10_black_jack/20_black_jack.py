@@ -49,4 +49,3 @@ while second_round:
             break
          elif sum(user_cards) == 21:
             print("You win by blackjack")
-   
