@@ -1,6 +1,7 @@
 import turtle, random, colorgram
 turtle.colormode(255)
 t = turtle.Turtle()
+t.up()
 t.speed(0)
 CIRCLE = 20
 SPACE = 50
@@ -9,7 +10,6 @@ y = -180
 t.goto(x,y)
 
 colors = [(251, 249, 245), (209, 165, 125), (249, 234, 237), (140, 48, 106), (164, 169, 38), (244, 80, 56)]
-t.up()
 
 change = [10,20,30,40,50,60,70,80,90]
 for K in range(100):
