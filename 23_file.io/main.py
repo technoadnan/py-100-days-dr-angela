@@ -16,9 +16,8 @@ with open("23_file.io/Input/Letters/starting_letter.txt") as letter:
 
 with open("23_file.io/Input/Names/invited_names.txt") as file:
    for j in file.readlines():
+      j = j.replace("\n","")
       with open("23_file.io/Input/Names/invited_names.txt") as new_letter:
-         # name = existing_letter[0].split(" ")[1].split(",")[0][1:-1]
-         new_letter.write(f"{existing_letter.replace('[name]',j)}")
-      # names.append(j)
-
-
+         with open(f"23_file.io/Output/ReadyToSend/{j}.txt",mode="w") as upt_letter:
+            upt_letter.write(f"{existing_letter.replace('[name]',j)}")
+         print(j)
