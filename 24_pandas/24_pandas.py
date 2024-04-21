@@ -19,6 +19,7 @@ avg = data["temp"].mean()
 
 
 mon = data[data.day == "Monday"].temp  # to get the certain row use conditions
+print(type(mon))
 print((mon * 9/5)+32)
 
 data_dict = {
