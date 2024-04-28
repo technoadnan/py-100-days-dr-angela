@@ -22,7 +22,7 @@ def reset_timer():
     canvas.itemconfig(text, text="00:00")
     global reps
     reps = 0
-    
+     
 # ---------------------------- TIMER MECHANISM ------------------------------- # 
 def start_timer():
     global reps
