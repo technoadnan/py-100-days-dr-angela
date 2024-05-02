@@ -7,10 +7,9 @@ BACKGROUND_COLOR = "#B1DDC6"
 FONT_TITLE = ("Ariel",40, "italic")
 FONT_WORD = ("Ariel",60, "bold")
 all_words = pd.read_csv("data/french_words.csv")
-t= []
-# fr_w = frwo
-# -------------------------- pass ------------------------------ # 
+t = []
 fr_word = ""
+# -------------------------- pass ------------------------------ # 
 def swap():
    global fr_word
    fr_word = random.choice(all_words.French)
@@ -27,11 +26,15 @@ def right():
 
 # -------------------------- keep ------------------------------#
 def wrong():
-   t.append(all_words.drop(columns=fr_word))
-   pass
+   l = all_words["French"].tolist()
+   l.remove(fr_word)
+   e = all_words["English"].tolist()
+   q = all_words[all_words.French == fr_word].English.values[0]
+   e.remove(q)
+   with open("data/word_to_learn.csv", mode="a") as file:
+      file.write(f"{fr_word},{q}\n")
 
-
-
+   swap()
 # ------------------------ UI --------------------------------- # 
 window = tk.Tk()
 window.title("Flashy")
@@ -52,8 +55,6 @@ word = tk.Label(text="",font=FONT_WORD)
 word.place(relx=0.5, rely=0.4, anchor=tk.CENTER)
 
 swap()
-# window.after(3000)
-# print("as")
 
 
 # # buttons
@@ -66,15 +67,14 @@ btn_right.grid(column=0,row=1,pady=30)
 btn_wrong = tk.Button(text="Start",command=wrong,highlightthickness=0, image=wrong_img, borderwidth=0, pady=30)
 btn_wrong.grid(column=1,row=1, pady=30)
 
-# test
-# time.sleep(3)
-# bg_img.config(tk.PhotoImage(file="images/card_back.png"))
-# word.config(text=)
-
-try:
-   pd.read_csv("data/word_to_learn.csv")
-except FileNotFoundError:
-   with open("data/word_to_learn.csv", mode="w") as file:
-      pass
+# ---------------------- FILE ------------------------ # 
+with open("31_title_card\\data\\word_to_learn.csv",mode="r") as file:
+   r = file.readlines()
+   print(r)
+   if len(r) > 1:
+      all_words = pd.read_csv("data/words_to_learn.csv")
+   # if ("French" in r or "English" in r) and len(r) >2:
+   # else:
+   #    all_words = pd.read_csv("data/words_to_learn.csv")
 
 window.mainloop()
