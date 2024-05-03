@@ -20,9 +20,12 @@ def swap():
    # print("hello")
 def right():
    en_word = all_words[all_words.French == fr_word].English.values[0]
+   # all_words = all_words.drop(all_words[all_words.French == fr_word].index)
    canvas.itemconfig(canvas_img, image=back_img)
    title.config(text="English", background="#91c2af",foreground="white")
    word.config(text=en_word,background="#91c2af",foreground="white")
+   
+   
 
 # -------------------------- keep ------------------------------#
 def wrong():
@@ -33,6 +36,8 @@ def wrong():
    e.remove(q)
    with open("data/word_to_learn.csv", mode="a") as file:
       file.write(f"{fr_word},{q}\n")
+
+   
 
    swap()
 # ------------------------ UI --------------------------------- # 
@@ -68,13 +73,10 @@ btn_wrong = tk.Button(text="Start",command=wrong,highlightthickness=0, image=wro
 btn_wrong.grid(column=1,row=1, pady=30)
 
 # ---------------------- FILE ------------------------ # 
-with open("31_title_card\\data\\word_to_learn.csv",mode="r") as file:
+with open("data/word_to_learn.csv", mode="r", encoding="ISO-8859-1") as file:
    r = file.readlines()
    print(r)
    if len(r) > 1:
-      all_words = pd.read_csv("data/words_to_learn.csv")
-   # if ("French" in r or "English" in r) and len(r) >2:
-   # else:
-   #    all_words = pd.read_csv("data/words_to_learn.csv")
-
+      all_words = pd.read_csv("data/word_to_learn.csv", encoding="ISO-8859-1")
+# with open
 window.mainloop()
