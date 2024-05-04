@@ -26,7 +26,7 @@ def right():
    word.config(text=en_word,background="#91c2af",foreground="white")
    
    
-
+ 
 # -------------------------- keep ------------------------------#
 def wrong():
    l = all_words["French"].tolist()
