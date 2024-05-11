@@ -20,3 +20,4 @@ with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
       to_addrs="expert.technoadnan@gmail.com",
       msg="Subject:Hello\n\nThis is the body of my email."
    )
+# will finish tmr 
