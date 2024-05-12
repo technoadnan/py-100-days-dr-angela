@@ -1,4 +1,5 @@
 import smtplib
+import datetime as dt
 
 my_email = "adpd1000@gmail.com"
 password = "gdek vnkh agik zzzt"
@@ -21,3 +22,4 @@ with smtplib.SMTP("smtp.gmail.com", port=587) as connection:
       msg="Subject:Hello\n\nThis is the body of my email."
    )
 # will finish tmr 
+
