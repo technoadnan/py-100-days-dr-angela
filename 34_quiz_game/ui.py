@@ -4,7 +4,7 @@ THEME_COLOR = "#375362"
 FONT_NAME = "Courier"
 
 
-
+ 
 
 class QuizInterface:
    def __init__(self) -> None:
@@ -16,6 +16,7 @@ class QuizInterface:
       score.grid(column=1,row=0)
 
       # draw a textbox 
+      
 
 
       # draw two btns
