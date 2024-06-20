@@ -5,14 +5,14 @@ from twilio.rest import Client
 STOCK = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 
-ALPHA_API_KEY = "I5FEF55T5V432CVV0ZV"
+ALPHA_API_KEY = "abc"
 ALPHA_END_POINT = "https://www.alphavantage.co/query"
 
-NEWS_API_KEY = "3ead24424d9cd482330b800b816ebe2027c3"
+NEWS_API_KEY = "abc"
 NEWS_END_POINT = "https://newsapi.org/v2/everything"
 
-TWILIO_ACCOUNT_SID = "AC51beb3069160b7d290dd29def5407431"
-TWILIO_AUTH_TOKEN = "7af95e4e1e4f29e7d11e1233050895af52d"
+TWILIO_ACCOUNT_SID = "abc"
+TWILIO_AUTH_TOKEN = "abc"
 client = Client(TWILIO_ACCOUNT_SID,TWILIO_AUTH_TOKEN)
 
 ## STEP 1: Use https://www.alphavantage.co
