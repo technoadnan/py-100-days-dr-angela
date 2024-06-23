@@ -4,6 +4,7 @@ import datetime
 date = datetime.datetime.now().strftime("%Y%m%d")
 
 USERNAME = "technoadnan"
+# TOKEN = "irukdcmoirkfdvkmlzodkl"
 ID = "book"
 PIXELA_ENDPOINT = "https://pixe.la/v1/users"
 GRAPH_ENDPOINT = f"{PIXELA_ENDPOINT}/{USERNAME}/graphs"
@@ -58,4 +59,4 @@ put_pixel_config = {
 t = {
    "name" : "reading",
 }
-print(requests.put(url=POST_PIXEL_ENDPOINT, headers=headers, json=t).text)
+# print(requests.put(url=POST_PIXEL_ENDPOINT, headers=headers, json=t).text)
