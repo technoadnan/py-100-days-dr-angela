@@ -56,46 +56,46 @@ for exercise in result["exercises"]:
    print(sheet_response.text)
 
 
-import requests
-import datetime
+# import requests
+# import datetime
 
-date = datetime.datetime.now().strftime("%Y%m%d")
+# date = datetime.datetime.now().strftime("%Y%m%d")
 
-NUTRITIONX_ENDPOINT = "https://trackapi.nutritionix.com/v2/natural/exercise"
-SHEETY_ENDPOUINT = "https://api.sheety.co/8c6e05b8c817e140544bf493cc9a0812/myworkouts/workouts"
+# NUTRITIONX_ENDPOINT = "https://trackapi.nutritionix.com/v2/natural/exercise"
+# SHEETY_ENDPOUINT = "https://api.sheety.co/8c6e05b8c817e140544bf493cc9a0812/myworkouts/workouts"
 
-# API_KEY = "33782dcf2c07fd0d23e47fa80001b1bb2"
+# # API_KEY = "33782dcf2c07fd0d23e47fa80001b1bb2"
 
-headers = {
-   "x-app-id" : "fa375371",
-   "x-app-key" : API_KEY,
+# headers = {
+#    "x-app-id" : "fa375371",
+#    "x-app-key" : API_KEY,
 
-}
-params = {
-   "query" : "speed walk for 30 min",
-   # "query" : input("etn"),
-   "weight_kg" : 54,
-   "height_cm" : 167,
-   "age" : 17
-}
+# }
+# params = {
+#    "query" : "speed walk for 30 min",
+#    # "query" : input("etn"),
+#    "weight_kg" : 54,
+#    "height_cm" : 167,
+#    "age" : 17
+# }
 
-# response = requests.post(url=NUTRITIONX_ENDPOINT, headers=headers, json=params)
-# print(response.text)
+# # response = requests.post(url=NUTRITIONX_ENDPOINT, headers=headers, json=params)
+# # print(response.text)
 
-# edit a row
-edit_row = {
-   "workout" : {
-      "date" : "23/07/2020",
-      "time" : "16:00:00",
-      "exercise" : "running",
-      "duration" : "22",
-      "calories" : "100"
-   }
-}
-headers = {
-   'Content-Type': 'application/json',
-   # "Authorization" : "Bearer lkoyihkgmfbkgfjhklmgboprte2"
-}
+# # edit a row
+# edit_row = {
+#    "workout" : {
+#       "date" : "23/07/2020",
+#       "time" : "16:00:00",
+#       "exercise" : "running",
+#       "duration" : "22",
+#       "calories" : "100"
+#    }
+# }
+# headers = {
+#    'Content-Type': 'application/json',
+#    # "Authorization" : "Bearer lkoyihkgmfbkgfjhklmgboprte2"
+# }
 
-edit = requests.post(url=SHEETY_ENDPOUINT, json=edit_row, headers=headers)
-print(edit.text)
+# edit = requests.post(url=SHEETY_ENDPOUINT, json=edit_row, headers=headers)
+# print(edit.text)
